@@ -1,0 +1,8 @@
+typing_extensions>=3.7.4; python_version=='3.7'
+opencv-python==4.5.5.62
+cmake==3.24.0
+dlib==19.18.0
+face_recognition==1.3.0
+PyQt5==5.15.4
+pyqt5-tools==5.15.4.3.2
+requests==2.27.1
