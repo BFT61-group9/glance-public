@@ -49,9 +49,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>160</y>
+     <y>150</y>
      <width>491</width>
-     <height>80</height>
+     <height>99</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -73,6 +73,19 @@
        </widget>
       </item>
      </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="makeAccButton">
+      <property name="font">
+       <font>
+        <family>Roboto Condensed</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Create Account</string>
+      </property>
+     </widget>
     </item>
     <item>
      <widget class="QPushButton" name="runButton">

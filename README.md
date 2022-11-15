@@ -42,5 +42,4 @@ pip install requests==2.27.1
     - [Code runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
 
 ## **Usage**
-- Run `make_account.py` to capture facial features and encode into database
-- Run `__main__.py` to run Glance
+Run `__main__.py` to run Glance
