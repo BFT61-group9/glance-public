@@ -1,6 +1,8 @@
 # **Glance - Facial recognition payment app**
 
-This project use face recognition to execute payment
+This is a DEMO project that use facial recognition to execute payment (with MoMo's API)
+
+Code by @AbsoluteWinter
  
 ## **Installation**
 
@@ -43,3 +45,7 @@ pip install requests==2.27.1
 
 ## **Usage**
 Run `__main__.py` to run Glance
+
+![](docs/appGUI.jpg)
+
+Create Account first, then Start

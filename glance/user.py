@@ -1,7 +1,4 @@
 """
-USER
----
-
 This module contains User class
 """
 
