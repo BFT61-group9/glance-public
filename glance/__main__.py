@@ -1,7 +1,7 @@
 """
 GLANCE - DEMO VERSION
 """
-__version__ = "0.35.0"
+__version__ = "0.36.0"
 import os
 import sys
 import datetime

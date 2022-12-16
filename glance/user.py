@@ -3,17 +3,10 @@ USER
 ---
 
 This module contains User class
-
-Todo list:
-- check if username in database
-- load/save user
 """
-
-
 
 import re
 import json
-
 
 def validate_username(username: str, minlen: int = 6) -> bool:
     """
@@ -33,15 +26,13 @@ def validate_username(username: str, minlen: int = 6) -> bool:
         return False
     return True
 
-
 def export_to_json(data, location: str):
     """Export to JSON file format"""
     # dat = json.dumps(data, indent=4, sort_keys=True)
     dat = json.dumps(data)
-    with open(location,"w") as json_file:
+    with open(location, "w") as json_file:
         json_file.writelines(dat)
     return None
-
 
 class User:
     def __init__(self, username: str, first_name: str, last_name: str) -> None:
@@ -49,7 +40,7 @@ class User:
         self._first_name: str = first_name
         self._last_name: str = last_name
         self._balance: int = 0
-        self.__account_password = None # Hidden, and remember to only store hash, salt
+        self.__account_password = None # Hidden, and remember to only store hash, salt, this feature unimplemented for now
 
     def __str__(self):
         """String representative"""
@@ -61,7 +52,6 @@ class User:
     
     def export(self):
         """Export user data"""
-        # return self.__dict__
         output = {
             "username": self.username,
             "fname": self._first_name,
@@ -69,8 +59,6 @@ class User:
             "balance": self._balance
         }
         return output
-
-
 
 if __name__ == "__main__":
     pass

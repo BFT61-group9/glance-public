@@ -19,7 +19,6 @@ from app_util import (
 # START
 path = locw("UserDB") # database path
 
-
 def maintain(debug: bool = False):
     """
     Check each user in database:
@@ -47,8 +46,6 @@ def maintain(debug: bool = False):
             if debug: print("Data generated\n")
     return None
 
-
-
 def load_data(folder: str):
     """Load data from database"""
     dat_path = get_all_file_path(folder, NP_DAT)
@@ -74,16 +71,7 @@ def load_data_new(folder: str):
         final_data.append((np.load(dat_path[i][0]), dat_path[i][1], udat[i]))
     return final_data
 
-# def load_data(folder: str):
-#     try:
-#         return load_data_new(folder)
-#     except:
-#         return load_data_old(folder)
-
 
 
 if __name__ == "__main__":
-    # from rich import print
-    # load_data(path)
     print(load_data_new(path)[0])
-    pass

@@ -13,7 +13,7 @@ import hashlib
 import requests
 
 
-def momo_pay(amount_of_money: int, debug: bool = False):
+def momo_pay(amount_of_money: int, debug: bool = True):
     """
     Use MoMo's sandbox environment
     """

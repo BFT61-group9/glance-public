@@ -5,8 +5,6 @@ Some utility functions
 import os
 import re
 
-import cv2
-
 
 #================ CONSTANT VARIABLES ================
 IMG_TYPE = ("jpg", "png", "jpeg")
@@ -81,9 +79,6 @@ def get_all_file_path(folder: str, *file_type: str):
                 temp = re.search(r"\b.*[.](\w+$)\b", file)
                 if temp is not None:
                     available_file_type.append(temp[1])
-        # print(f"Available file type: {set(available_file_type)}")
-        # return list(set(available_file_type))
-        # return None
         raise ValueError(f"Available file type: {set(available_file_type)}")
 
     # Generate regex pattern
@@ -101,41 +96,6 @@ def get_all_file_path(folder: str, *file_type: str):
                 file_location.append((os.path.join(root, file), result[1]))
     return file_location
 
-
-#================ CV2 ================
-def get_haarcascade(model: str = None):
-    """
-    Get haarcascade model from opencv (cv2) data
-    """
-    default_face_model = "haarcascade_frontalface_default.xml"
-    if model is None:
-        model = default_face_model
-    try:
-        # Option 01: cv2  built-in method
-        path = os.path.join(cv2.data.haarcascades, model)
-        return cv2.CascadeClassifier(path)
-    except:
-        try:
-            # Option 02: using `os` lib
-            cv2_base_dir = os.path.dirname(os.path.abspath(cv2.__file__))
-            haar_model = os.path.join(cv2_base_dir, "data", model)
-            return cv2.CascadeClassifier(haar_model)
-        except:
-            # Option 03: get from opencv github
-            url = ("https://raw.githubusercontent.com/"
-                   "opencv/opencv/master/data/haarcascades/"
-                   "haarcascade_frontalface_default.xml")
-            return cv2.CascadeClassifier(url)
-
-def get_haarcascade_list():
-    """
-    Loop through the opencv (cv2) data to find haarcascade model
-    """
-    haar_list = []
-    for file in os.listdir(cv2.data.haarcascades):
-        if file.endswith(".xml"):
-            haar_list.append(file)
-    return haar_list
 
 
 if __name__ == "__main__":
