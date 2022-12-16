@@ -2,7 +2,7 @@
 
 This is a DEMO project that use facial recognition to execute payment (with MoMo's API)
 
-Code by @AbsoluteWinter
+Code by [@AbsoluteWinter](https://github.com/AbsoluteWinter)
  
 ## **Installation**
 
